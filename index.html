@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Portfolio</title>
+
+    <meta name="description" content="Responsive Portfolio Website">
+    <meta name="keywords" content="Portfolio, HTML, CSS, Responsive Design">
+    <meta name="author" content="Vedansh">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" aria-label="Toggle Theme">
+        🌙
+    </button>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Vedansh Mirajkar</h1>
+
+            <nav aria-label="Main Navigation">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main class="grid-layout">
+
+        <!-- Hero -->
+        <section class="hero">
+            <div>
+                <h2>Web Developer & Designer</h2>
+                <p>
+                    Creating responsive and accessible websites
+                    using modern web technologies.
+                </p>
+
+                <a href="#projects" class="btn">
+                    View Projects
+                </a>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="card">
+            <h2>About Me</h2>
+            <p>
+                I am a passionate web developer focused on
+                creating responsive and user-friendly websites.
+            </p>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="card">
+            <h2>Skills</h2>
+
+            <div class="skills-grid">
+                <div>HTML5</div>
+                <div>CSS3</div>
+                <div>JavaScript</div>
+                <div>Python</div>
+                <div>React</div>
+                <div>SQL</div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="card">
+            <h2>Projects</h2>
+
+            <div class="project-container">
+
+                <article class="project">
+                    <h3>Portfolio Website</h3>
+                    <p>Responsive portfolio built using HTML & CSS.</p>
+                </article>
+
+                <article class="project">
+                    <h3>Weather App</h3>
+                    <p>Python weather forecasting application.</p>
+                </article>
+
+                <article class="project">
+                    <h3>Quiz System</h3>
+                    <p>Interactive quiz application.</p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="card">
+            <h2>Contact Me</h2>
+
+            <form class="contact-form">
+
+                <input
+                    type="text"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    placeholder="Your Email"
+                    required
+                >
+
+                <textarea
+                    rows="5"
+                    placeholder="Your Message"
+                    required
+                ></textarea>
+
+                <button type="submit">
+                    Send Message
+                </button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Vedansh Mirajkar | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        const toggleBtn = document.getElementById("theme-toggle");
+
+        toggleBtn.addEventListener("click", () => {
+            document.body.classList.toggle("dark-theme");
+
+            toggleBtn.textContent =
+                document.body.classList.contains("dark-theme")
+                ? "☀️"
+                : "🌙";
+        });
+    </script>
+
+</body>
+</html>
